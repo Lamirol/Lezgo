@@ -46,6 +46,10 @@ public class Gaulois {
 		}
 	}
 
+	public void faireUneDonation(Musee m) {
+		// TODO
+	}
+
 //	@Override
 //	public String toString() {
 //		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
