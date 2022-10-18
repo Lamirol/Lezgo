@@ -14,6 +14,7 @@ public class Druide {
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion = 1;
+	private Random random = new Random();
 
 	/**
 	 * @param nom
@@ -47,8 +48,7 @@ public class Druide {
 
 	public void preparerPotion() {
 		this.parler("Je vais aller préparer une petite potion...");
-		Random random = new Random();
-		int rn = -1;
+		int rn = this.random.nextInt(effetPotionMax);
 		while (rn < effetPotionMin) {
 			rn = random.nextInt(effetPotionMax);
 		}
@@ -62,7 +62,7 @@ public class Druide {
 	}
 
 	public void booster(Gaulois g) {
-		if (g.getNom() == "Obélix") {
+		if ("Obélix".equals(g.getNom())) {
 			this.parler(" Non, Obélix !... Tu n’auras pas de potion magique !");
 
 		} else {
