@@ -47,7 +47,12 @@ public class Gaulois {
 	}
 
 	public void faireUneDonation(Musee m) {
-		// TODO
+		this.parler("Je donne au musee tous mes trophees :");
+		for (Equipement e : trophees) {
+			System.out.println("- " + e.toString());
+			m.donnerTrophees(this, e);
+		}
+		trophees = new Equipement[100];
 	}
 
 //	@Override
